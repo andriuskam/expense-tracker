@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    background-color: rgb(250, 250, 250);
+}
+
+.App {
+    margin: 1em;
+    background-color: white;
+    box-shadow: 0 2px 4px rgb(158, 158, 158);
+    padding-bottom: 1em;
+
+    .balance {
+        background-color: rgb(245, 245, 245);
+        margin: 0.5em 1em;
+        padding: 0.5em;
+        box-shadow: 0 2px 4px rgb(158, 158, 158);
+        min-width: 250px;
+
+        h4 {
+            font-size: 0.7em;
+            text-shadow: 0px .5px .7px rgb(66, 66, 66);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+    }
+
+    .inc-exp-container{
+        background-color: rgb(245, 245, 245);
+        margin: 0.5em 1em;
+        padding: 0.5em;
+        box-shadow: 0 2px 4px rgb(158, 158, 158);
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        h4 {
+            text-align: center;
+            font-size: 0.7em;
+            text-shadow: 0px .5px .7px rgb(66, 66, 66);
+            margin-bottom: 0.5em;
+        }
+
+        p{
+            text-align: center;
+        }
+        .money{
+            font-weight: bold;
+        }
+        .minus{
+            color: rgb(239, 83, 80);
+        }
+        .plus{
+            color: rgb(102, 187, 106);
+        }
+    }
+
+    .addTransactions {
+        padding: 0.5em;
+        margin: 0.5em;
+
+        h3 {
+            text-align: center;
+            font-size: 1em;
+            text-shadow: 0px .5px .7px rgb(66, 66, 66);
+            margin-bottom: 0.5em;
+            border-bottom: 1.5px solid rgb(224, 224, 224);
+            padding-bottom: 0.5em;
+        }
+
+        .form-control {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                text-align: left;
+                font-size: 0.7em;
+                font-weight: bold;
+                text-shadow: 0px .5px .7px rgb(66, 66, 66);
+                margin-bottom: 0.5em;
+
+                .naming-span {
+                    text-shadow: none;
+                    font-style: italic;
+                    color: rgb(255, 224, 130);
+                }
+            }
+
+            input{
+                padding: 0.5em;
+                text-align: center;
+                margin-bottom: 1em;
+                outline: none;
+                border: 3px solid white;
+                box-shadow: 0 2px 2px rgb(158, 158, 158);
+                transition: border .6s linear;
+                font-weight: bold;
+
+                &:hover {
+                    border: 3px solid rgb(245, 245, 245);
+                }
+            }
+        }
+
+        .addButton {
+            width: 100%;
+            padding: 0.5em;
+            outline: none;
+            border: 3px solid white;
+            box-shadow: 0 2px 2px rgb(158, 158, 158);
+            background-color: rgb(245, 245, 245);
+            transition: background-color .6s linear;
+            font-weight: bold;
+
+            &:hover {
+                background-color: rgb(255, 224, 130);
+            }
+        }
+    }
+
+    .history {
+        margin: 1em;
+        height: 100%;
+
+        h3 {
+            text-align: center;
+            font-size: 1em;
+            text-shadow: 0px .5px .7px rgb(66, 66, 66);
+            border-bottom: 1.5px solid rgb(224, 224, 224);
+            padding-bottom: 0.5em;
+        }
+        ul > h4 {
+            text-align: center;
+            margin: 1em;
+        }
+        li {
+            display: grid;
+            grid-template-columns: 2fr 2fr 0.5fr;
+            justify-content: flex-end;
+            align-items: center;
+
+            text-align: center;
+
+            list-style: none;
+            margin: 0.6em 0;
+            padding: 0.5em;
+            box-shadow: 0 1px 2px rgb(158, 158, 158);
+            background-color: rgb(224, 224, 224);
+
+            h4{
+
+            }
+            .amount{
+                font-weight: bold;
+            }
+
+        }
+        .minus {
+            border-left: 8px solid rgb(239, 83, 80);
+        }
+        .plus {
+            border-left: 8px solid rgb(102, 187, 106);
+        }
+        .delete-btn {
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            border: none;
+            font-weight: bold;
+            width: 40px;
+            height: 40px;
+            background-color: rgb(255, 224, 130);
+            transition: background-color .1s linear;
+
+            &:hover {
+                background-color: rgb(255, 171, 145);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) {
+    .header {
+        background-color: rgb(245, 245, 245);
+        box-shadow: 0 1px 2px rgb(158, 158, 158);
+        text-align: center;
+        padding: 1em;
+        margin-bottom: 1em;
+
+        h2 {
+            text-shadow: 0px 1px 2px rgb(66, 66, 66);
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .input-fields{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+        .form-control {
+            margin: 0.5em;
+
+            label {
+                height: 45px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .header {
+        background-color: rgb(245, 245, 245);
+        box-shadow: 0 1px 2px rgb(158, 158, 158);
+        text-align: left;
+        padding: 1em;
+        margin-bottom: 1em;
+
+        h2 {
+            text-shadow: 0px 1px 2px rgb(66, 66, 66);
+        }
+
+    }
+    .container {
+        display: flex;
+
+        .input-fields{
+            display: flex;
+            flex-direction: column;
+            
+            .form-control {
+                margin: 0;
+                width: 100%;
+
+                label{
+                    height: auto;
+                }
+            }
+        }
+    }
+    .main {
+        width: 100%;
+    }
+}

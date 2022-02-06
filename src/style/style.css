@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.App {
+  margin: 1em;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 4px #9e9e9e;
+          box-shadow: 0 2px 4px #9e9e9e;
+  padding-bottom: 1em;
+}
+
+.App .balance {
+  background-color: whitesmoke;
+  margin: 0.5em 1em;
+  padding: 0.5em;
+  -webkit-box-shadow: 0 2px 4px #9e9e9e;
+          box-shadow: 0 2px 4px #9e9e9e;
+  min-width: 250px;
+}
+
+.App .balance h4 {
+  font-size: 0.7em;
+  text-shadow: 0px 0.5px 0.7px #424242;
+}
+
+.App .balance h1 {
+  text-align: center;
+}
+
+.App .inc-exp-container {
+  background-color: whitesmoke;
+  margin: 0.5em 1em;
+  padding: 0.5em;
+  -webkit-box-shadow: 0 2px 4px #9e9e9e;
+          box-shadow: 0 2px 4px #9e9e9e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .inc-exp-container h4 {
+  text-align: center;
+  font-size: 0.7em;
+  text-shadow: 0px 0.5px 0.7px #424242;
+  margin-bottom: 0.5em;
+}
+
+.App .inc-exp-container p {
+  text-align: center;
+}
+
+.App .inc-exp-container .money {
+  font-weight: bold;
+}
+
+.App .inc-exp-container .minus {
+  color: #ef5350;
+}
+
+.App .inc-exp-container .plus {
+  color: #66bb6a;
+}
+
+.App .addTransactions {
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+.App .addTransactions h3 {
+  text-align: center;
+  font-size: 1em;
+  text-shadow: 0px 0.5px 0.7px #424242;
+  margin-bottom: 0.5em;
+  border-bottom: 1.5px solid #e0e0e0;
+  padding-bottom: 0.5em;
+}
+
+.App .addTransactions .form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.App .addTransactions .form-control label {
+  text-align: left;
+  font-size: 0.7em;
+  font-weight: bold;
+  text-shadow: 0px 0.5px 0.7px #424242;
+  margin-bottom: 0.5em;
+}
+
+.App .addTransactions .form-control label .naming-span {
+  text-shadow: none;
+  font-style: italic;
+  color: #ffe082;
+}
+
+.App .addTransactions .form-control input {
+  padding: 0.5em;
+  text-align: center;
+  margin-bottom: 1em;
+  outline: none;
+  border: 3px solid white;
+  -webkit-box-shadow: 0 2px 2px #9e9e9e;
+          box-shadow: 0 2px 2px #9e9e9e;
+  -webkit-transition: border .6s linear;
+  transition: border .6s linear;
+  font-weight: bold;
+}
+
+.App .addTransactions .form-control input:hover {
+  border: 3px solid whitesmoke;
+}
+
+.App .addTransactions .addButton {
+  width: 100%;
+  padding: 0.5em;
+  outline: none;
+  border: 3px solid white;
+  -webkit-box-shadow: 0 2px 2px #9e9e9e;
+          box-shadow: 0 2px 2px #9e9e9e;
+  background-color: whitesmoke;
+  -webkit-transition: background-color .6s linear;
+  transition: background-color .6s linear;
+  font-weight: bold;
+}
+
+.App .addTransactions .addButton:hover {
+  background-color: #ffe082;
+}
+
+.App .history {
+  margin: 1em;
+  height: 100%;
+}
+
+.App .history h3 {
+  text-align: center;
+  font-size: 1em;
+  text-shadow: 0px 0.5px 0.7px #424242;
+  border-bottom: 1.5px solid #e0e0e0;
+  padding-bottom: 0.5em;
+}
+
+.App .history ul > h4 {
+  text-align: center;
+  margin: 1em;
+}
+
+.App .history li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 2fr 0.5fr;
+      grid-template-columns: 2fr 2fr 0.5fr;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  list-style: none;
+  margin: 0.6em 0;
+  padding: 0.5em;
+  -webkit-box-shadow: 0 1px 2px #9e9e9e;
+          box-shadow: 0 1px 2px #9e9e9e;
+  background-color: #e0e0e0;
+}
+
+.App .history li .amount {
+  font-weight: bold;
+}
+
+.App .history .minus {
+  border-left: 8px solid #ef5350;
+}
+
+.App .history .plus {
+  border-left: 8px solid #66bb6a;
+}
+
+.App .history .delete-btn {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: none;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  background-color: #ffe082;
+  -webkit-transition: background-color .1s linear;
+  transition: background-color .1s linear;
+}
+
+.App .history .delete-btn:hover {
+  background-color: #ffab91;
+}
+
+@media only screen and (min-width: 320px) {
+  .header {
+    background-color: whitesmoke;
+    -webkit-box-shadow: 0 1px 2px #9e9e9e;
+            box-shadow: 0 1px 2px #9e9e9e;
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+  .header h2 {
+    text-shadow: 0px 1px 2px #424242;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .input-fields {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .input-fields .form-control {
+    margin: 0.5em;
+  }
+  .input-fields .form-control label {
+    height: 45px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    background-color: whitesmoke;
+    -webkit-box-shadow: 0 1px 2px #9e9e9e;
+            box-shadow: 0 1px 2px #9e9e9e;
+    text-align: left;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+  .header h2 {
+    text-shadow: 0px 1px 2px #424242;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .container .input-fields {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .input-fields .form-control {
+    margin: 0;
+    width: 100%;
+  }
+  .container .input-fields .form-control label {
+    height: auto;
+  }
+  .main {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
